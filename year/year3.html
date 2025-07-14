@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branch Selection</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .branch-button {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 15px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .branch-button:hover {
+            background: linear-gradient(135deg, #45a049, #3e8e41);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Your Branch</h1>
+    <div class="button-container">
+        <a href="/cs/cse3.html" class="branch-button">Computer Science</a>
+        <a href="/ec/ece3.html" class="branch-button">Electronics & Communication</a>
+        <a href="/mech/mech3.html" class="branch-button">Mechanical</a>
+        <a href="/civil/civil3.html" class="branch-button">Civil</a>
+        <a href="/ee/eee3.html" class="branch-button">Electrical & Electronics</a>
+        <a href="/is/is3.html" class="branch-button">Information Science</a>
+        <a href="/aero/aero3.html" class="branch-button">Aeronautical</a>
+        <a href="/ai/ai3.html" class="branch-button">Computer Science (AIML)</a>
+        <a href="/arch/arch3.html" class="branch-button">Architecture</a>
+    </div>
+</body>
+</html>

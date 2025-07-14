@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Consent Required</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      text-align: justify;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    #fullConsent {
+      display: none;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 1rem 0.5rem 0 0;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      color: white;
+    }
+    .btn-primary {
+      background-color: #007bff;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+    .btn-secondary {
+      background-color: #6c757d;
+    }
+    .btn-secondary:hover {
+      background-color: #5a6268;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📜 Terms & Conditions</h1>
+    <p>
+      Welcome to our platform! We’re really excited to have you here. Before you continue, we’d like to share some important details about how we manage data and how it might be used to improve your experience on this site.
+    </p>
+
+    <p>
+      By proceeding, you agree to our [Terms and Conditions] and [Privacy Policy] 
+    </p>
+
+    <button class="btn btn-secondary" onclick="toggleConsent()" id="toggleBtn">View More</button>
+
+    <div id="fullConsent">
+      <p>
+        Our primary goal is to provide you with a seamless and enjoyable experience. To help us do that, we collect certain types of data automatically. This includes information about your device, your browser, and your interactions with the site. 
+      </p>
+      <p>
+        We do this to understand how people are using our platform and improve the service over time. In some cases, we may use this data to provide you with relevant ads. We work with trusted advertising partners who help us deliver more personalized and useful content. Rest assured, the information we collect is anonymized, which means we do not track you as an individual.
+      </p>
+      <p>
+        By using this website, you acknowledge that we may share this anonymized data with third-party partners. These partners help us improve our service, display ads that may interest you, and understand how people engage with our content. Your data will never be sold or shared in a personally identifiable way. You will still see ads, but they might be more aligned with your interests, which could make your experience more enjoyable.
+      </p>
+      <p>
+        The data we collect is used for purposes like understanding how different features are being used, identifying trends, and improving the overall quality of our platform. This is a normal practice across many websites today and is generally safe and helpful for improving your experience. In fact, it can make the platform work better for everyone.
+      </p>
+      <p>
+        If you’re okay with this, simply click "I Agree" below. If you’d like to read the full terms, feel free to click "View More" again and dive deeper. If you don’t agree, we completely understand, and you are free to leave the platform. Your access will not be affected unless you choose to opt out.
+      </p>
+      <p>
+        We’re committed to respecting your privacy and your choices. If you ever change your mind, you can always review or revoke your consent through the settings. We want to make sure you’re always in control of your experience here.
+      </p>
+    </div>
+
+    <button class="btn btn-primary" onclick="acceptConsent()">I Agree</button>
+  </div>
+
+  <script>
+    function acceptConsent() {
+      localStorage.setItem("agreedToTerms", "yes");
+      window.location.href = "notes.html"; // Make sure notes.html exists
+    }
+
+    function toggleConsent() {
+      const full = document.getElementById("fullConsent");
+      const btn = document.getElementById("toggleBtn");
+      if (full.style.display === "none") {
+        full.style.display = "block";
+        btn.innerText = "Hide";
+      } else {
+        full.style.display = "none";
+        btn.innerText = "View More";
+      }
+    }
+
+    // Auto redirect if consent already given
+    if (localStorage.getItem("agreedToTerms") === "yes") {
+      window.location.href = "notes.html";
+    }
+  </script>
+</body>
+</html>
