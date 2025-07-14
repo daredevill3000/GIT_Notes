@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branch Selection</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .branch-button {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 15px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .branch-button:hover {
+            background: linear-gradient(135deg, #45a049, #3e8e41);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .branch-button.disabled {
+            background: #b0b0b0 !important;
+            color: #eee !important;
+            pointer-events: none;
+            cursor: not-allowed;
+            opacity: 0.7;
+            box-shadow: none;
+            transform: none !important;
+        }
+
+        .common-courses {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .common-courses h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .common-courses .common-button {
+            background: linear-gradient(135deg, #007BFF, #0056b3);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 15px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .common-courses .common-button:hover {
+            background: linear-gradient(135deg, #0056b3, #003f7f);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Your Branch</h1>
+    <div class="button-container">
+        <a class="branch-button disabled" tabindex="-1" aria-disabled="true">Computer Science</a>
+        <a href="/ec/ece1.html" class="branch-button">Electronics & Communication</a>
+        <a class="branch-button disabled" tabindex="-1" aria-disabled="true">Mechanical</a>
+        <a class="branch-button disabled" tabindex="-1" aria-disabled="true">Civil</a>
+        <a class="branch-button disabled" tabindex="-1" aria-disabled="true">Electrical & Electronics</a>
+        <a class="branch-button disabled" tabindex="-1" aria-disabled="true">Information Science</a>
+        <a class="branch-button disabled" tabindex="-1" aria-disabled="true">Aeronautical</a>
+        <a class="branch-button disabled" tabindex="-1" aria-disabled="true">Computer Science (AIML)</a>
+        <a class="branch-button disabled" tabindex="-1" aria-disabled="true">Architecture</a>
+    </div>
+    <p style="margin-top: 10px; color: #fff; font-size: 1.05rem; text-align: center; opacity: 0.9;">
+        Currently we are only serving EC notes only. Other branches notes will be available soon.
+    </p>
+
+    <div class="common-courses">
+        <h2>ESC,PLC and ETC Common Courses</h2>
+        <a href="/common/esc.html" class="common-button">ESC</a>
+        <a href="/common/etc.html" class="common-button">ETC</a>
+        <a href="/common/plc.html" class="common-button">PLC</a>
+    </div>
+
+    <div class="common-courses">
+        <h2>Common Subjects</h2>
+        <a href="https://drive.google.com/drive/folders/1zr2mIanlOr3ez0hUwhKgPaXLkjlLFkP7?usp=sharing" class="common-button" target="_blank">English</a>
+        <a href="https://drive.google.com/drive/folders/19YAJjqzydUZXvrAEsEGn8K-wdudCKp_U?usp=drive_link" class="common-button" target="_blank">Kannada</a>
+        <a href="https://drive.google.com/drive/folders/1Gv-azaVYDBdd7wF4h2OW7VV9n0K6aNFe?usp=drive_link" class="common-button" target="_blank">ICO</a>
+        <a href="https://drive.google.com/drive/folders/1qC-XacjcBBZWNPV_G_iQjivyhDJ2Wuc8?usp=sharing" class="common-button" target="_blank">SFH</a>
+    </div>
+
+    <footer>
+        <p>© 2025 College Notes. Designed by <a href="#">KnowOne</a>.</p>
+    </footer>
+</body>
+</html>
